@@ -59,7 +59,7 @@ $(".animalButton").on("click",function(){
 
 guacamole();
 
-$("#addAnimal").on("click" , function () {
+$("#addAnimal").on("click" , function(event) {
     event.preventDefault();
     var newName = $("#animal-input").val().trim();
     var newAnimalBtn = $("<button>");
@@ -68,6 +68,7 @@ $("#addAnimal").on("click" , function () {
    newAnimalBtn.addClass("animalButton");
    newAnimalBtn.text(newName);
    $("#animalButtons").append(newAnimalBtn);
+   $("#animal-input").empty();
 //    console.log(newAnimalBtn);
     guacamole();
 });
